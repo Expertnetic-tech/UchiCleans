@@ -1,0 +1,1028 @@
+/*Index styles*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: white;
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  /* gap: 300px; */
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Contact Information */
+.contact-info {
+  text-align: right;
+  font-weight: bold;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Ensures the tooltip container spans the full width */
+}
+
+textarea {
+  width: 100%; /* Ensures the textarea spans the full width of its container */
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #f0f8ff; /* Light blue (AliceBlue) for a fresh look */
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+}
+
+/* Navigation Links */
+nav a {
+  color: #2a7f62; /* Greenish-blue for a clean, modern look */
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #d4f1f4; /* Very light blue hover effect */
+  color: #1b5e46; /* Darker green-blue for contrast */
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #2a7f62; /* Matching greenish-blue */
+  margin: 5px 0;
+}
+/* Main content */
+.main-content {
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #f0f8ff; /* Light blue (AliceBlue) for a fresh look */
+  color: #2a7f62; /* Greenish-blue for contrast */
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #1b5e46; /* Darker green-blue */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #00a5cf; /* Brighter blue for a fresh hover effect */
+}
+.footer-note {
+  text-align: center;
+  background-color: #f1f1f1; /* Light background for visibility */
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  border-top: 1px solid #ddd; /* Optional: Adds a thin line above the note */
+  position: relative;
+  margin-top: 20px; /* Adds some space between footer and the note */
+}
+
+.footer-note p {
+  margin: 0;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 10px;
+  display: none;
+}
+
+.social-links a {
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #d4f1f4; /* Very light blue */
+    z-index: 10;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px;
+    text-align: left;
+    border-top: 1px solid #a3e4eb; /* Light blue border */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color:#f0f8ff; /* Light blue for a clean, welcoming vibe */
+}
+
+.home-text {
+  flex-basis: 50%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.home-text h1 {
+  font-size: 42px;
+  color: #2a7f62; /* Greenish-blue for a fresh, modern look */
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.home-text p {
+  font-size: 18px;
+  color: #333; /* Dark gray for readability */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2a7f62; /* Greenish-blue button background */
+  color: white;
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #1b5e46; /* Darker green on hover */
+}
+
+.home-image {
+  flex-basis: 40%;
+  max-width: 700px;
+}
+
+.home-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home-image {
+    max-width: 100%;
+  }
+}
+
+/*Services*/
+#services {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f0f8ff; /* Light blue for a clean, refreshing feel */
+}
+
+#services h2 {
+  font-size: 36px;
+  color: #2a7f62; /* Greenish-blue for a modern and professional look */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Service Grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Service Boxes */
+.services div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-top: 5px solid #2a7f62; /* Greenish-blue accent */
+}
+
+.services div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Images */
+.service-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Service Headings */
+h3 {
+  font-size: 22px;
+  color: #1b5e46; /* Slightly darker greenish-blue */
+  margin: 15px 0 10px;
+}
+
+/* Service Descriptions */
+p {
+  font-size: 16px;
+  color: #4a7c59; /* Softer green tone for readability */
+  line-height: 1.5;
+}
+
+/* Pricing */
+
+/* Base styles */
+#pricing {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+#pricing h2 {
+  font-size: 36px;
+  color: #2a7f62;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#pricing h3 {
+  color: #1b5e46;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#pricing p {
+  font-size: 18px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#pricing img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#pricing ul {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#pricing ul li {
+  font-size: 16px;
+  color: #555;
+  padding: 8px 0;
+  list-style: none;
+  position: relative;
+}
+
+#pricing ul li::before {
+  content: "✔";
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  #pricing h2 {
+    font-size: 32px;
+  }
+
+  #pricing p {
+    font-size: 16px;
+  }
+
+  #pricing img {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  #pricing {
+    padding: 40px 15px;
+  }
+
+  #pricing h2 {
+    font-size: 28px;
+  }
+
+  #pricing p {
+    font-size: 16px;
+  }
+
+  #pricing ul li {
+    font-size: 14px;
+  }
+
+  #pricing ul {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  #pricing {
+    padding: 30px 10px;
+  }
+
+  #pricing h2 {
+    font-size: 24px;
+  }
+
+  #pricing p {
+    font-size: 14px;
+  }
+
+  #pricing ul {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  #pricing {
+    padding: 20px 10px;
+  }
+
+  #pricing h2 {
+    font-size: 22px;
+  }
+
+  #pricing p {
+    font-size: 14px;
+  }
+
+  #pricing img {
+    margin-bottom: 10px;
+  }
+
+  #pricing ul {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+
+  #pricing ul li {
+    font-size: 12px;
+  }
+}
+
+/* Vision Section */
+#vision {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f0f8ff; /* Light blue background for a fresh feel */
+}
+
+#vision h2 {
+  color: #2a7f62; /* Greenish-blue for a modern, clean look */
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.vision-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.vision-image {
+  width: 45%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.vision-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.vision-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #444; /* Darker gray for readability */
+  line-height: 1.8;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.vision-text:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vision-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vision-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .vision-text {
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px;
+  }
+}
+
+
+/* About Us Section */
+.about-section {
+  background-color: #f0f8ff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2a7f62; /* Greenish-blue for freshness */
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  text-align: left;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 18px;
+  color: #444; /* Dark gray for readability */
+  line-height: 1.6;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text ul li {
+  font-size: 18px;
+  padding: 10px 0;
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-text ul li::before {
+  content: "✔";
+  color: #2a7f62; /* Matching greenish-blue for consistency */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 418px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+#contact h3 {
+  color: #2a7f62; /* Greenish-blue for a fresh and inviting feel */
+  font-weight: bold;
+}
+
+#contact h2 {
+  color: #2a7f62; /* Greenish-blue for consistency */
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.contact-image {
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-image:hover {
+  transform: scale(1.05);
+}
+
+.contact-info {
+  font-size: 18px;
+  color: #333; /* Dark gray for readability */
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact-info a {
+  color: #2a7f62; /* Matching greenish-blue for consistency */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #003f6b; /* Darker blue on hover */
+}
+
+/* Form Styling */
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 70%; /* Adjusted to use full width for better usability */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2a7f62; /* Greenish-blue for focus state */
+  box-shadow: 0 0 8px rgba(42, 127, 98, 0.3); /* Greenish focus glow */
+  outline: none;
+}
+
+
+/* Button Styling */
+.btn {
+  display: block;
+  width: 50%;
+  background-color: #2a7f62; /* Greenish-blue for a fresh and inviting look */
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto; /* Centers the button horizontally */
+}
+
+.btn:hover {
+  background-color: #1b5e46; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift for a dynamic feel */
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+  margin-bottom: 20px;
+}
+
+.contact-section h2 {
+  color: #2a7f62; /* Greenish-blue for consistency */
+  font-size: 28px;
+}
+
+.contact-section p {
+  font-size: 16px;
+  color: #444; /* Dark gray for readability */
+}
+
+.email {
+  font-weight: bold;
+  color: #2a7f62; /* Greenish-blue for consistency */
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+  color: #005a9c; /* Slightly darker blue on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-image {
+    max-width: 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}
+
+
+/* Sitemap Section */
+.sitemap {
+  padding: 40px 20px;
+  background: #f0f8ff;
+  text-align: center;
+}
+
+.sitemap h2 {
+  color: #2a7f62; /* Blue for headings */
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.sitemap-nav {
+  display: block;
+  width: 100%;
+  max-width: 600px; /* Limit width on large screens */
+  margin: 0 auto; /* Center it horizontally */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-list li {
+  margin: 10px 0;
+}
+
+.sitemap-list li a {
+  font-size: 18px;
+  color: #0073e6; /* Soft blue for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.sitemap-list li a:hover {
+  color: #2a7f62; /* Fresh green on hover */
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .sitemap-nav {
+    padding: 10px; /* Reduce padding for small screens */
+    width: 90%; /* Use more screen width on mobile */
+    max-width: none; /* Remove max-width restriction */
+    margin: 0 auto; /* Ensure it's still centered */
+  }
+
+  .sitemap-list li {
+    font-size: 16px; /* Make font smaller for mobile */
+  }
+}
+
+
+/* General Privacy Policy Styles */
+.privacy-policy {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.privacy-policy h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2a7f62; 
+}
+
+.privacy-image {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  margin: 0 auto 30px; /* Center the image horizontally */
+  display: block;
+}
+
+.policy-section {
+  margin-bottom: 30px;
+}
+
+.policy-section h2 {
+  color: #2a7f62; 
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.policy-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666; /* Light gray for body text */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .privacy-policy {
+    padding: 20px;
+  }
+
+  .privacy-policy h1 {
+    font-size: 28px;
+  }
+
+  .privacy-image {
+    max-height: 300px;
+  }
+
+  .policy-section h2 {
+    font-size: 20px;
+  }
+
+  .policy-section p {
+    font-size: 14px;
+  }
+}
+
+/* Container Styling */
+.terms-container {
+  padding: 40px 20px;
+  background: #f0f8ff;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px; /* Adding subtle border radius for softer corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow to separate content */
+}
+
+/* Title Styling */
+.terms-container h2 {
+  font-size: 28px;
+  color: #005a9c;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.updated-date {
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Flexbox Layout */
+.terms-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Image Section */
+.terms-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.terms-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Text Section */
+.terms-text {
+  flex: 2;
+  min-width: 300px;
+}
+
+.terms-text h3 {
+  font-size: 20px;
+  color: #005a9c;
+  margin-top: 20px;
+}
+
+.terms-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px; /* Added margin to separate paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terms-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .terms-text,
+  .terms-image {
+    width: 100%;
+  }
+
+  .terms-container {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uchi Cleans</title>
+    <script></script>
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="uchicleans.ca">
+            <img src="img/uchi-cleans.png" alt="Uchi Cleans Logo" class="logo" />
+        </a>
+        <div class="contact-info">
+            <p><strong><i class="fas fa-envelope"></i> </strong> <a
+                    href="mailto:info@uchicleans.ca">info@uchicleans.ca</a></p>
+            <p><strong><i class="fas fa-phone-alt"></i></strong> <a href="tel:(778) 899-7129">(778) 899-7129</a></p>
+            <p><strong><i class="fas fa-map-marker-alt"></i></strong>Serving Coquitlam, North Vancouver, Richmond, Surrey, Langley and Surrounding Areas</p>
+            <p> BC, Canada</p>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="vision.html">Our Foundation</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div id="contact">
+        <h2>Contact Us</h2>
+        <div>
+            <img src="img/contact-image.jpg" alt="Customer support team" class="home-image" loading="lazy">
+            <!-- <div class="contact-info">
+                <p><strong><i class="fas fa-envelope"></i> </strong> <a
+                        href="mailto:info@uchicleans.ca">info@uchicleans.ca</a></p>
+                <p><strong><i class="fas fa-phone-alt"></i></strong> <a href="tel:(778) 899-7129">(778) 899-7129</a></p>
+                <p><strong><i class="fas fa-map-marker-alt"></i></strong>Serving Coquitlam, North Vancouver, Richmond, Surrey, Langley and Surrounding Areas</p>
+                <p> BC, Canada</p>
+            </div> -->
+
+            <div class="container">
+              
+                <div class="contact-section">
+                    <h3>General Inquiries</h2>
+                    <p>For general questions about our services or company, contact us at:</p>
+                    <p><strong><i class="fas fa-envelope"></i> </strong><a href="mailto:info@uchicleans.ca" class="email">info@uchicleans.ca</a></p>
+                    <hr>
+                </div>
+                
+                <div class="contact-section">
+                    <h3>Sales & Service Requests</h2>
+                    <p>Need a quote or details about our services? Contact our sales team:</p>
+                    <p><strong><i class="fas fa-envelope"></i> </strong><a href="mailto:sales@uchicleans.ca" class="email">sales@uchicleans.ca</a></p>
+                    <hr>
+                </div>
+                
+                <div class="contact-section">
+                    <h3>Customer Support</h2>
+                    <p>If you're an existing client needing assistance, reach out to our support team:</p>
+                    <p><strong><i class="fas fa-envelope"></i> </strong><a href="mailto:support@uchicleans.ca" class="email">support@uchicleans.ca</a></p>
+                    <hr>
+                </div>
+                
+                <div class="contact-section">
+                    <h3>Privacy & Data Protection</h2>
+                    <p>For concerns regarding privacy and data security, contact us at:</p>
+                    <p><strong><i class="fas fa-envelope"></i> </strong><a href="mailto:privacy@uchicleans.ca" class="email">privacy@uchicleans.ca</a></p>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+
+        <h3>Send us a Message</h3>
+        <form action="https://formspree.io/f/xanqbwaq" method="POST" id="cc-form">
+            <div>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="tooltip">
+                <textarea id="message" name="message" rows="5"
+                    placeholder="Please provide details about the cleaning services you require." required></textarea>
+                <span class="tooltiptext">Please provide details about the cleaning services you require, including the
+                    type of service (e.g., standard cleaning, deep cleaning), desired frequency (e.g., one-time, weekly,
+                    bi-weekly), the type and size of your building (e.g., 3-bedroom house, 2-bedroom apartment), any
+                    specific requirements or preferences you have, and your contact information.</label>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2023 Uchi Cleans |
+        <a href="mailto:info@uchicleans.ca">info@uchicleans.ca</a> |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-of-service.html">Terms of Service</a> |
+        <a href="sitemap.html">Sitemap</a>
+        <div class="social-links">
+            <a href="https://facebook.com/CorecentricCleaning" target="_blank">Facebook</a>
+            |
+            <a href="https://twitter.com/CorecentricClean" target="_blank">Twitter</a>
+            |
+            <a href="https://instagram.com/CorecentricCleaning" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
+        }
+    </script>
+    <!-- <script type="text/javascript"> //<![CDATA[
+        var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+        document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+        //]]></script>
+    <script language="JavaScript" type="text/javascript">
+        TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_md_167x42.png", "POSDV", "none");
+    </script> -->
+</body>
+
+</html>
