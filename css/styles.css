@@ -251,6 +251,7 @@ footer a:hover {
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
+  margin-top: 16px;
 }
 
 .btn:hover {
@@ -738,10 +739,10 @@ textarea:focus {
 
 
 /* Button Styling */
-.btn {
+/* .btn {
   display: block;
   width: 50%;
-  background-color: #2a7f62; /* Greenish-blue for a fresh and inviting look */
+  background-color: #2a7f62; 
   color: white;
   padding: 14px;
   font-size: 18px;
@@ -752,8 +753,8 @@ textarea:focus {
   transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
   border: none;
   cursor: pointer;
-  margin: 0 auto; /* Centers the button horizontally */
-}
+  margin: 0 auto; 
+} */
 
 .btn:hover {
   background-color: #1b5e46; /* Darker green on hover */
