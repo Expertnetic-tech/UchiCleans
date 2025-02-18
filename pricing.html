@@ -1,88 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uchi Cleans</title>
-    <script></script>
-    <script defer src="js/script.js"></script>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  </head>
-  <body>
-    <header>
-        <a href="uchicleans.ca">
-            <img src="img/uchi-cleans.png" alt="Uchi Cleans Logo" class="logo" />
-        </a>
-        <div class="contact-info">
-            <p><strong><i class="fas fa-envelope"></i> </strong> <a href="mailto:uchicleansltd@gmail.com">uchicleansltd@gmail.com</a></p>
-            <p><strong><i class="fas fa-phone-alt"></i></strong> <a href="tel:(778) 899-7129">(778) 899-7129</a></p>
-            <p><strong><i class="fas fa-map-marker-alt"></i></strong>Serving Coquitlam, North Vancouver, Richmond, Surrey, Langley and Surrounding Areas</p>  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uchi Cleans</title>
+  <script></script>
+  <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <a href="uchicleans.ca">
+      <img src="img/uchi-cleans.png" alt="Uchi Cleans Logo" class="logo" />
+    </a>
+    <div class="contact-info">
+      <p><strong><i class="fas fa-envelope"></i> </strong> <a
+          href="mailto:uchicleansltd@gmail.com">uchicleansltd@gmail.com</a></p>
+      <p><strong><i class="fas fa-phone-alt"></i></strong> <a href="tel:(778) 899-7129">(778) 899-7129</a></p>
+      <p><strong><i class="fas fa-map-marker-alt"></i></strong>Serving Coquitlam, North Vancouver, Richmond, Surrey,
+        Langley and Surrounding Areas</p>
       <p> BC, Canada</p>
-        </div>
-    </header>
-
-    <nav id="navbar">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="vision.html">Our Foundation</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-
-    <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
+  </header>
 
-    <div  id="pricing">
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="vision.html">Our Foundation</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div id="pricing">
     <h2>Pricing</h2>
 
+  
+
+    <div id="pricing-breakdown">
+  
+      <h3>1. Standard Cleaning </h3>
+      <p>✅ Light dusting, vacuuming, mopping, kitchen & bathroom cleaning</p>
+  
+      <h3>2. Deep Cleaning </h3>
+      <p>
+        ✅ Includes everything in Standard + baseboards, inside appliances,
+        detailed scrubbing
+      </p>
+  
+      <h3>3. Normal Carpet Cleaning </h3>
+      <p>✅ Deep vacuuming and use of carpet shampooing machine</p>
+    </div>
+  
+    <!-- Residential Base Rate: $0.26/sqft (adjusts for cleaning type & frequency)
+  Commercial Base Rate: $0.10/sqft
+  Biweekly Discount:  (12.5% off)
+  Monthly Discount:  (6.25% off)
+  One-time: $0.10/sqft (no discount) -->
+  
+    <div id="pricing-new">
+      <h3>Cleaning Service Pricing Calculator</h3>
+  
+      <label for="sqft">Size (sqft):</label>
+      <input type="number" id="sqft" placeholder="Enter sqft" required />
+  
+      <label for="category">Property Type:</label>
+      <select id="category">
+        <option value="residential">Residential</option>
+        <option value="commercial">Commercial</option>
+      </select>
+  
+      <label for="cleaningType">Cleaning Type:</label>
+      <select id="cleaningType">
+        <option value="standard">Standard Cleaning</option>
+        <option value="deep">Deep Cleaning</option>
+        <option value="carpet">Carpet Cleaning</option>
+      </select>
+  
+      <label for="frequency">Cleaning Frequency:</label>
+      <select id="frequency">
+        <option value="one-time">One-time</option>
+        <option value="biweekly">Biweekly (Every 2 Weeks)</option>
+        <option value="monthly">Monthly (Every 4 Weeks)</option>
+      </select>
+  
+      <h3 id="priceResult">Estimated Price: $0.00 CAD</h3>
+    </div>
+  
+    
+
     <div class="pricing-section">
-        <h2>Flexible Pricing to Suit Your Needs</h2>
-        <p>
-            At Uchi Cleans, we offer customizable pricing based on your unique requirements and budget.
-             Our commercial cleaning plans start at just <strong>$0.10 per sq. ft.</strong>, ensuring affordability without compromising on quality.
-              For other services, we provide a variety of packages, along with add-ons, tailored to meet your needs and budget.
-        </p>
-        
-        
-        
-        <h3>Get a Personalized Quote</h3>
-        <p>To receive a personalized quote, please email us at <a href="mailto:uchicleansltd@gmail.com">uchicleansltd@gmail.com</a> with the following details:</p>
-        
-        <ul>
-          <li>Your cleaning needs (e.g., type of service required, frequency)</li>
-          <li>Building type and size</li>
-          <li>Any specific requirements or preferences</li>
-          <li>Your contact information</li>
-        </ul>
-        
-        <p>
-            Our team will be happy to assess your request and provide you with a tailored pricing plan that fits your needs.We take pride in offering transparent and flexible pricing to ensure you receive the best value. 
-            Get in touch today—we look forward to assisting you! Below are the cleaning options based on building types and factors that influence the pricing.</p>
-    
-      </div>
-	
-    
-    <img src="img/pricing-image.jpg" alt="pricing Increased Quality decreased cost" class="home-image" loading="lazy">
+      <h2>Flexible Pricing to Suit Your Needs</h2>
+      <p>
+        At Uchi Cleans, we offer customizable pricing based on your unique requirements and budget.
+        Our commercial cleaning plans start at just <strong>$0.10 per sq. ft.</strong>, ensuring affordability without
+        compromising on quality.
+        For other services, we provide a variety of packages, along with add-ons, tailored to meet your needs and
+        budget.
+      </p>
 
-    <!-- Building Types Pricing -->
-    <h3>Building Types</h3>
-    <p>We offer customized pricing based on the following building types:</p>
-    <ul>
-        <li>Standalone Office Building</li>
-        <li>Office Unit</li>
-        <li>Industrial Facility</li>
-        <li>Educational Facility</li>
-        <li>Healthcare/Medical Building</li>
-        <li>Retail</li>
-    </ul>
-
-    <h3>Pricing Considerations</h3>
+      <h3>Pricing Considerations</h3>
     <p>Our pricing is influenced by several factors, but we remain flexible and offer customizable plans to suit your needs.</p>
     <ul>
         <li>Cleaning Budget</li>
@@ -96,46 +123,80 @@
         <li>Occasional Cleaning Needs</li>
         <li>Special Requests</li>
     </ul>
+
+      <h3>Get a Personalized Quote</h3>
+      <p>To receive a personalized quote, please email us at <a
+          href="mailto:uchicleansltd@gmail.com">uchicleansltd@gmail.com</a> with the following details:</p>
+
+      <ul>
+        <li>Your cleaning needs (e.g., type of service required, frequency)</li>
+        <li>Building type and size</li>
+        <li>Any specific requirements or preferences</li>
+        <li>Your contact information</li>
+      </ul>
+
+    </div>
+
+    <script>
+      function calculatePrice() {
+        let sqft = document.getElementById("sqft").value;
+        let category = document.getElementById("category").value;
+        let cleaningType = document.getElementById("cleaningType").value;
+        let frequency = document.getElementById("frequency").value;
+  
+        if (!sqft || sqft <= 0) {
+          document.getElementById("priceResult").innerText = "Estimated Price: $0.00 CAD";
+          return;
+        }
+  
+        let rate = 0;
+  
+        if (category === "residential") {
+          if (cleaningType === "standard") {
+            rate = frequency === "biweekly" ? 0.2275 : frequency === "monthly" ? 0.24375 : 0.26;
+          } else if (cleaningType === "deep") {
+            rate = frequency === "biweekly" ? 0.315 : frequency === "monthly" ? 0.34375 : 0.36;
+          } else if (cleaningType === "carpet") {
+            rate = frequency === "biweekly" ? 0.4025 : frequency === "monthly" ? 0.43125 : 0.46;
+          }
+        } else if (category === "commercial") {
+          if (cleaningType === "standard") {
+            rate = frequency === "biweekly" ? 0.0875 : frequency === "monthly" ? 0.09375 : 0.10;
+          } else if (cleaningType === "deep") {
+            rate = frequency === "biweekly" ? 0.175 : frequency === "monthly" ? 0.1875 : 0.20;
+          } else if (cleaningType === "carpet") {
+            rate = frequency === "biweekly" ? 0.2625 : frequency === "monthly" ? 0.28125 : 0.30;
+          }
+        }
+  
+        let price = (sqft * rate).toFixed(2);
+        document.getElementById("priceResult").innerText = `Estimated Price: $${price} CAD`;
+      }
+  
+      document.getElementById("sqft").addEventListener("input", calculatePrice);
+      document.getElementById("category").addEventListener("change", calculatePrice);
+      document.getElementById("cleaningType").addEventListener("change", calculatePrice);
+      document.getElementById("frequency").addEventListener("change", calculatePrice);
+    </script>
+
+
+    <!-- <img src="img/pricing-image.jpg" alt="pricing Increased Quality decreased cost" class="home-image" loading="lazy"> -->
     <a href="contact.html" class="btn">Get A Quote</a>
 
-    <!-- <div>
-        <div >
-            <h3>Airbnb</h3>
-            <p>Customized cleaning packages available.</p>
-        </div>
-        <div >
-            <h3>House Cleaning</h3>
-            <p>Flexible options to suit your needs.</p>
-        </div>
-        <div >
-            <h3>Deep Cleaning</h3>
-            <p>One-time or scheduled deep cleaning.</p>
-        </div>
-        <div >
-            <h3>Building-Based Pricing</h3>
-            <p>Tailored pricing for offices, industries, healthcare, and more.</p>
-        </div>
-    </div> -->
-</div>
+  </div>
 
-<footer>
+  <footer>
     &copy; 2023 Uchi Cleans |
     <a href="mailto:uchicleansltd@gmail.com">uchicleansltd@gmail.com</a> |
     <a href="privacy-policy.html">Privacy Policy</a> |
     <a href="terms-of-service.html">Terms of Service</a> |
     <a href="sitemap.html">Sitemap</a>
     <div class="social-links">
-      <a href="https://facebook.com/CorecentricCleaning" target="_blank"
-        >Facebook</a
-      >
+      <a href="https://facebook.com/CorecentricCleaning" target="_blank">Facebook</a>
       |
-      <a href="https://twitter.com/CorecentricClean" target="_blank"
-        >Twitter</a
-      >
+      <a href="https://twitter.com/CorecentricClean" target="_blank">Twitter</a>
       |
-      <a href="https://instagram.com/CorecentricCleaning" target="_blank"
-        >Instagram</a
-      >
+      <a href="https://instagram.com/CorecentricCleaning" target="_blank">Instagram</a>
     </div>
   </footer>
 
@@ -153,4 +214,5 @@
     TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_md_167x42.png", "POSDV", "none");
   </script>  -->
 </body>
+
 </html>
