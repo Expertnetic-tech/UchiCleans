@@ -90,6 +90,7 @@
       <label for="frequency">Cleaning Frequency:</label>
       <select id="frequency">
         <option value="one-time">One-time</option>
+        <option value="weekly">Weekly( Once a Week )</option>
         <option value="biweekly">Biweekly (Every 2 Weeks)</option>
         <option value="monthly">Monthly (Every 4 Weeks)</option>
       </select>
@@ -152,22 +153,34 @@
         let rate = 0;
   
         if (category === "residential") {
-          if (cleaningType === "standard") {
-            rate = frequency === "biweekly" ? 0.2275 : frequency === "monthly" ? 0.24375 : 0.26;
-          } else if (cleaningType === "deep") {
-            rate = frequency === "biweekly" ? 0.315 : frequency === "monthly" ? 0.34375 : 0.36;
-          } else if (cleaningType === "carpet") {
-            rate = frequency === "biweekly" ? 0.4025 : frequency === "monthly" ? 0.43125 : 0.46;
-          }
-        } else if (category === "commercial") {
-          if (cleaningType === "standard") {
-            rate = frequency === "biweekly" ? 0.0875 : frequency === "monthly" ? 0.09375 : 0.10;
-          } else if (cleaningType === "deep") {
-            rate = frequency === "biweekly" ? 0.175 : frequency === "monthly" ? 0.1875 : 0.20;
-          } else if (cleaningType === "carpet") {
-            rate = frequency === "biweekly" ? 0.2625 : frequency === "monthly" ? 0.28125 : 0.30;
-          }
+        if (cleaningType === "standard") {
+            rate = frequency === "weekly" ? 0.221 : 
+                   frequency === "biweekly" ? 0.2275 : 
+                   frequency === "monthly" ? 0.24375 : 0.26;
+        } else if (cleaningType === "deep") {
+            rate = frequency === "weekly" ? 0.306 : 
+                   frequency === "biweekly" ? 0.315 : 
+                   frequency === "monthly" ? 0.34375 : 0.36;
+        } else if (cleaningType === "carpet") {
+            rate = frequency === "weekly" ? 0.391 : 
+                   frequency === "biweekly" ? 0.4025 : 
+                   frequency === "monthly" ? 0.43125 : 0.46;
         }
+    } else if (category === "commercial") {
+        if (cleaningType === "standard") {
+            rate = frequency === "weekly" ? 0.085 : 
+                   frequency === "biweekly" ? 0.0875 : 
+                   frequency === "monthly" ? 0.09375 : 0.10;
+        } else if (cleaningType === "deep") {
+            rate = frequency === "weekly" ? 0.17 : 
+                   frequency === "biweekly" ? 0.175 : 
+                   frequency === "monthly" ? 0.1875 : 0.20;
+        } else if (cleaningType === "carpet") {
+            rate = frequency === "weekly" ? 0.255 : 
+                   frequency === "biweekly" ? 0.2625 : 
+                   frequency === "monthly" ? 0.28125 : 0.30;
+        }
+    }
   
         let price = (sqft * rate).toFixed(2);
         document.getElementById("priceResult").innerText = `Estimated Price: $${price} CAD`;
